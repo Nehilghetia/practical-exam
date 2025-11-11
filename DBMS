@@ -1,0 +1,23 @@
+create database pratical;
+use pratical;
+
+create table Hotels(
+Hotel_id int primary key,
+Hotel_Name varchar(60) unique,
+city varchar(40),
+room_avaliable int not null
+);
+
+insert INTO Hotels VALUES
+(01,"Green Village","Upleta",102),
+(02,"Grand Hotel","Gondal",201);
+
+update Hotels
+set room_avaliable = 102
+where Hotel_id = 01;
+
+DELETE FROM hotels WHERE hotel_id = 02;
+
+select sum(room_avaliable) as total_rooms from Hotels;
+
+select avg(room_avaliable) as avg_rooms from Hotels;
